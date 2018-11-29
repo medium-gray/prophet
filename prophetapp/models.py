@@ -1,7 +1,7 @@
 from django.db import models
 
 class RawBitcoinData(models.Model):
-    datetime = models.DateField()
+    datetime = models.DateField(unique=True)
     price_coinbase = models.FloatField()
     price_bitstamp = models.FloatField()
     volume_btc_coinbase = models.FloatField()
